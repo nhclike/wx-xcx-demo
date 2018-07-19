@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+        "pages/detail/detail",
+        
     "pages/test/test",  
     "pages/swiper/swiper",   
     "pages/logs/logs"
@@ -9,7 +11,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#e4393c",
-    "navigationBarTitleText": "开饭啦！",
+    "navigationBarTitleText": "nhclike",
     "navigationBarTextStyle": "#fff"
   },
   "tabBar": {
@@ -21,7 +23,7 @@
         "selectedIconPath": "image/home.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/detail/detail",
         "text": "列表",
         "iconPath": "image/list.png",
         "selectedIconPath": "image/list.png"

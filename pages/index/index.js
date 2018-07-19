@@ -12,31 +12,43 @@ Page({
     duration: 500,
     proList:[
       {
-        logo:'p0281.jpg',
-        title:'开胃虾',
-        desc:'明虾',
-        price:'88'
+        logo: 'l7.png',
+        title: '冰淇淋',
+        desc: '奶油',
+        price: '10'
       },
       {
-        logo: 'p7818.jpg',
+        logo: 'l2.jpg',
         title: '口袋饼',
         desc: '面粉',
         price: '46'
       },
       {
-        logo: 'p8489.jpg',
+        logo:'l1.jpg',
+        title:'油爆虾',
+        desc:'明虾',
+        price:'88'
+      },
+      {
+        logo: 'l8.jpg',
+        title: '蛋饺',
+        desc: '鸡蛋',
+        price: '16'
+      },
+      {
+        logo: 'l3.jpg',
         title: '小米椒炒公鸡',
         desc: '三黄鸡',
         price: '56'
       },
       {
-        logo: 'p7933.jpg',
+        logo: 'l4.jpg',
         title: '放心油条',
         desc: '油条',
         price: '2'
       },
       {
-        logo: 'p9138.jpg',
+        logo: 'l5.jpg',
         title: '奶油蛋糕',
         desc: '奶油',
         price: '20'
