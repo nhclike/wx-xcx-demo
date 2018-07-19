@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='item-list'>
+  <view class='pro-item' wx:for='{{proList}}' bindtap='toDetail' data-index='{{index}}'>
+    <image src='./../../image/{{item.logo}}' class='left'></image>
+    <view class='pro-body' class='right'>
+      <view>[{{item.title}}]</view>
+      <text>主要成分：{{item.desc}} </text>
+      <view class='btnOpe'>
+        <button open-type='contact'>查看详情</button>
+        <button open-type='openSetting'>${{item.price}}</button>
+      </view>
+    </view>
+  </view>
+</view>

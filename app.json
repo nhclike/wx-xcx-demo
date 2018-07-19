@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/test/test",  
+    "pages/swiper/swiper",   
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e4393c",
+    "navigationBarTitleText": "开饭啦！",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "列表",
+        "iconPath": "image/list.png",
+        "selectedIconPath": "image/list.png"
+      }
+    ]
+  }
+}
