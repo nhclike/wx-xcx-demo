@@ -1,6 +1,6 @@
 swiper{
   width: 100%;
-  height: 415rpx;
+  height: 360rpx;
 }
 
 swiper image{
