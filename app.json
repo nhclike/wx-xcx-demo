@@ -1,18 +1,18 @@
 {
   "pages": [
     "pages/index/index",
-        "pages/detail/detail",
-        
-    "pages/test/test",  
-    "pages/swiper/swiper",   
-    "pages/logs/logs"
-    
+    "pages/detail/detail",
+    "pages/test/test",
+    "pages/swiper/swiper",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/user/user"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#e4393c",
     "navigationBarTitleText": "nhclike",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [
@@ -23,8 +23,8 @@
         "selectedIconPath": "image/home.png"
       },
       {
-        "pagePath": "pages/detail/detail",
-        "text": "列表",
+        "pagePath": "pages/user/user",
+        "text": "用户中心",
         "iconPath": "image/list.png",
         "selectedIconPath": "image/list.png"
       }

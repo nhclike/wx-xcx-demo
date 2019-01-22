@@ -9,14 +9,14 @@
 </swiper>
 
 <view class='item-list'>
-  <view class='pro-item' wx:for='{{proList}}' bindtap='toDetail' data-index='{{index}}'>
-    <image src='./../../image/{{item.logo}}' class='left'></image>
+  <view class='pro-item' wx:for='{{proList}}'  data-index='{{index}}'>
+    <image src='./../../image/{{item.logo}}.jpg' class='left'></image>
     <view class='pro-body' class='right'>
       <view>[{{item.title}}]</view>
       <text>主要成分：{{item.desc}} </text>
       <view class='btnOpe'>
-        <button open-type='contact'>查看详情</button>
-        <button open-type='openSetting'>${{item.price}}</button>
+        <button bindtap='toDetail'>查看详情</button>
+        <button open-type='contact'>${{item.price}}</button>
       </view>
     </view>
   </view>
