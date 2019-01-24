@@ -16,18 +16,42 @@ Page({
   onLoad: function (options) {
    
   },
+
   login:function(){
-    wx.navigateTo({
-      url: '../user/user'
+    //更新登录信息
+    app.globalData.loginInfo={
+      userName:this.data.userName,
+      passWord:this.data.passWord
+    }
+    //获得微信用户信息
+    var that = this
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function (userInfo) {
+      console.log(userInfo);
+      //更新数据
+      that.setData({
+        userInfo: userInfo
+      })
+    })
+    //跳转到用户页面
+    wx.switchTab({
+      url: './../user/user',
     })
   },
-  inputChange:function(e){
+  inputChangePassWord:function(e){
     console.log(e);
+    this.setData({
+      passWord:e.detail.value
+    })
+  },
+  inputChangeUserName: function (e) {
+    console.log(e);
+    this.setData({
+      userName: e.detail.value
+    })
   },
 
-  formSubmit:function(){
 
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

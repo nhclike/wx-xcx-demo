@@ -6,6 +6,7 @@
     "pages/swiper/swiper",
     "pages/logs/logs",
     "pages/login/login",
+    "pages/dishes/dishes", 
     "pages/user/user"
   ],
   "window": {

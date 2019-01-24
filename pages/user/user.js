@@ -6,24 +6,66 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo:{},
+    showBadge: false,
+    meList: [
+      {
+        text: '个人最爱',
+        icon: '',
+        url: ''
+      },
+      {
+        text: '我的订单',
+        icon: '',
+        url: ''
+      },
+      {
+        text: '历史订单',
+        icon: '',
+        url: ''
+      },
+      {
+        text: '个人收藏',
+        icon: '',
+        url: ''
+      },
+      {
+        text: '购物车',
+        icon: '',
+        url: './../dishes/dishes'
+      },
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log("---------onLoad-----------");
+    console.log(app.globalData.userInfo);
     if (app.globalData.userInfo==null){
       wx.redirectTo({
         url: './../login/login',
       })
     }
+    else{
+      console.log(app.globalData.userInfo);
+      this.setData({
+        userInfo: app.globalData.userInfo
+      })
+     
+    }
   },
-
+  goToTest:function(){
+    wx.navigateTo({
+      url: './../test/test',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    console.log("---------onReady-----------")
 
   },
 
@@ -31,6 +73,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    console.log("---------ononShow-----------")
 
   },
 
@@ -38,6 +81,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+    console.log("---------onHide-----------")
 
   },
 

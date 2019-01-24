@@ -1,25 +1,17 @@
 <!--pages/login/login.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-
-   <view>
+   <view class='loginContainer'>
     <form>
       <block>
         <view class="section__title">用户名</view>
-        <input type="idcard" placeholder="" id="username" value="{{inputs['username']}}" bindinput="inputChange"></input>
-    </block>
-    <block>
-        <view class="section__title">密码</view>
-        <input password type="text" placeholder="" id="password" value="{{inputs['username']}}" bindinput="inputChange" />
-    </block>
+        <input type="text" placeholder="" id="userName" value="{{userName}}" bindinput="inputChangeUserName"></input>
+      </block>
+      <block>
+         <view class="section__title">密码</view>
+        <input password type="text" placeholder="" id="passWord" value="{{passWord}}" bindinput="inputChangePassWord" />
+      </block>
     </form>
      
-     <button class='btn-primary' bindtap='login'>登录</button>
+     <button bindtap="login" type='primary'>登录</button>
    </view>
 </view>
