@@ -9,12 +9,15 @@ swiper image{
 }
 
 .item-list{
-  height: 100%;
-  position: relative;
-  top:0;
-  bottom: 20rpx
+  position: fixed;
+  top:360rpx;
+  bottom: 20rpx;
+  width: 100%;
 }
+.item-wrap{
+  height: 100%;
 
+}
 .pro-item{
   height: 180rpx;
   border: 1rpx solid #ddd;
