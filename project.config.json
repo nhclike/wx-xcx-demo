@@ -12,9 +12,11 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.0",
-	"appid": "wxef609dbd686c9397",
-	"projectname": "WeiXin",
+	"appid": "wx1405665086f351cb",
+	"projectname": "wx-ms",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

@@ -1,4 +1,7 @@
 <!--test.wxml-->
  <view class='item'>
-    
+    <view>
+      <image src='{{imgUrl}}'></image>
+      <button bindtap='choosePic'>选择图片</button>
+    </view>
   </view>

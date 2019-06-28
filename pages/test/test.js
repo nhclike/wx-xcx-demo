@@ -8,9 +8,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    imgUrl:''
   },
-
+  choosePic:function(){
+    var _this=this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        const tempFilePaths = res.tempFilePaths;
+        console.log(tempFilePaths);
+        _this.setData({
+          imgUrl: tempFilePaths[0]
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -6,14 +6,16 @@
     "pages/swiper/swiper",
     "pages/logs/logs",
     "pages/login/login",
-    "pages/dishes/dishes", 
-    "pages/user/user"
+    "pages/dishes/dishes",
+    "pages/user/user",
+    "pages/map/map"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#e4393c",
     "navigationBarTitleText": "nhclike",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "list": [
@@ -30,5 +32,6 @@
         "selectedIconPath": "image/list.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
