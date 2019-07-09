@@ -47,23 +47,20 @@ Page({
   onLoad: function (options) {
     console.log("---------onLoad-----------");
     console.log(app.globalData.userInfo);
-    // if (app.globalData.userInfo==null){
-    //  // wx.redirectTo({
-    //     //url: './../login/login',
-    //   //})
-    //   wx.getUserInfo({
-    //     success(res) {
-    //       app.globalData.userInfo = res.userInfo
-    //     }
-    //   })
-    // }
-    // else{
-    //   console.log(app.globalData.userInfo);
-    //   this.setData({
-    //     userInfo: app.globalData.userInfo
-    //   })
+    if (app.globalData.userInfo==null){
+      wx.getUserInfo({
+        success(res) {
+          app.globalData.userInfo = res.userInfo
+        }
+      })
+    }
+    else{
+      console.log(app.globalData.userInfo);
+      this.setData({
+        userInfo: app.globalData.userInfo
+      })
      
-    // }
+    }
     // 查看是否授权
     wx.getSetting({
       success(res) {
@@ -71,7 +68,9 @@ Page({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
             success(res) {
-              console.log(res.userInfo)
+              console.log(res.userInfo);
+            
+
             }
           })
         }
@@ -89,6 +88,16 @@ Page({
   goToMap: function () {
     wx.navigateTo({
       url: './../map/map',
+    })
+  },
+  goToVideo: function () {
+    wx.navigateTo({
+      url: './../video/video',
+    })
+  },
+  goToChat: function () {
+    wx.navigateTo({
+      url: './../chat/chat',
     })
   },
   login:function(){

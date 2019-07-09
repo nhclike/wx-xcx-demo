@@ -31,5 +31,6 @@
     </navigator>
     <button bindtap='goToTest'>进入测试页面</button>
     <button bindtap='goToMap'>进入地图页面</button>
-
+    <button bindtap='goToVideo'>进入视频播放页面</button>
+   <button bindtap='goToChat'>进入聊天室页面</button>
 </view>

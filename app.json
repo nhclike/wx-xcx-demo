@@ -8,7 +8,9 @@
     "pages/login/login",
     "pages/dishes/dishes",
     "pages/user/user",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/video/video",
+    "pages/chat/chat"
   ],
   "window": {
     "backgroundTextStyle": "light",
