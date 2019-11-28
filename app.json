@@ -10,7 +10,8 @@
     "pages/user/user",
     "pages/map/map",
     "pages/video/video",
-    "pages/chat/chat"
+    "pages/chat/chat",
+    "pages/file/file"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,6 +22,12 @@
   },
   "tabBar": {
     "list": [
+      {
+        "pagePath": "pages/test/test",
+        "text": "测试",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home.png"
+      },
       {
         "pagePath": "pages/index/index",
         "text": "首页",

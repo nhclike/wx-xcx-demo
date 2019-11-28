@@ -4,7 +4,7 @@
    <view class="historycon">
    <scroll-view scroll-y="true" class="history" scroll-top="{{scrollTop}}">
     
-       <block wx:for="{{newslist}}" wx:key>
+       <view wx:for-items="{{newslist}}" wx:for-item="item" wx:key="{{item.date}}">
           <!-- 历史消息 -->
            <!-- <view class="chat-news">
               <view style="text-align: left;padding-left: 20rpx;">
@@ -51,7 +51,7 @@
                   </block>
               </view>
           </view>  
-       </block>
+       </view>
    </scroll-view>
   </view>  
 </view>

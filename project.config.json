@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.0",
-	"appid": "wx1405665086f351cb",
+	"appid": "wx2eb1ecbf6bbc8ea3",
 	"projectname": "wx-ms",
 	"isGameTourist": false,
 	"simulatorType": "wechat",
@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -62,6 +62,13 @@
 					"id": -1,
 					"name": "chat",
 					"pathName": "pages/chat/chat",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/test/test",
+					"pathName": "pages/test/test",
 					"scene": null
 				}
 			]

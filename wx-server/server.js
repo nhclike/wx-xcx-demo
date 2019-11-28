@@ -17,7 +17,7 @@ wsServer.on('connect', connection => {
     console.log("从客户端接受的消息",message);
     if (message.type === 'utf8') {
       console.log('>> message content from client: ' + message.utf8Data)
-      connection.sendUTF(JSON.parse(message.utf8Data) )
+      connection.sendUTF(message.utf8Data)
     }
   }).on('close', (reasonCode, description) => {
     console.log('[' + new Date() + '] Peer ' + connection.remoteAddress + ' disconnected.')

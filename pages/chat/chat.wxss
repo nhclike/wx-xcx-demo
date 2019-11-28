@@ -154,9 +154,9 @@ page {
 }
 .sendMessage view{
   display: inline-block; 
-  width: 80rpx;
-  height: 80rpx;
-  line-height: 80rpx; 
+  width: 70rpx;
+  height: 70rpx;
+  line-height: 60rpx; 
   font-size: 60rpx; 
   text-align: center;
   color: #999;

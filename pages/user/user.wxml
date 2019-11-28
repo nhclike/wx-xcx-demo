@@ -1,20 +1,17 @@
 <!--pages/user/user.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <!-- <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text bindtap='login' class="userinfo-nickname">{{userInfo.nickName}}</text> -->
-    <!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
-    <open-data type="userAvatarUrl"></open-data>
-    <open-data type="userNickName"></open-data>
-    <!-- 需要使用 button 来授权登录 -->
-    <button
-      wx:if="{{canIUse}}"
-      open-type="getUserInfo"
-      bindgetuserinfo="bindGetUserInfo"
-    >
-      授权登录
-    </button>
-    <!-- <view wx:else>请升级微信版本</view> -->
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}" class='show-author'>
+      <button open-type="getUserInfo" class='show-author' bindgetuserinfo="getUserInfo">
+
+      <!--随意定制 -->
+        <view class='get-userinfo'>获取用户信息</view>
+      </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
   </view>
 </view>
 
@@ -29,8 +26,5 @@
         <view  class="badge" wx:if="{{showBadge}}">1</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </navigator>
-    <button bindtap='goToTest'>进入测试页面</button>
-    <button bindtap='goToMap'>进入地图页面</button>
-    <button bindtap='goToVideo'>进入视频播放页面</button>
-   <button bindtap='goToChat'>进入聊天室页面</button>
 </view>
+

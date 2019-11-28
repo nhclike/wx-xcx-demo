@@ -1,7 +1,16 @@
 <!--test.wxml-->
- <view class='item'>
-    <view>
-      <image src='{{imgUrl}}'></image>
-      <button bindtap='choosePic'>选择图片</button>
-    </view>
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}"  open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击获取我的昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
   </view>
+  <view bindtap="goToChat"><button class="chat"> ♥ 聊天室 点击进入</button></view>
+</view>
+ <view class="weui-cells weui-cells_after-title">
+    <button bindtap='goToFile'>进入文件测试页面</button>
+    <button bindtap='goToMap'>进入地图页面</button>
+    <button bindtap='goToVideo'>进入视频播放页面</button>
+</view>

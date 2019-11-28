@@ -8,31 +8,70 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgUrl:''
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  choosePic:function(){
-    var _this=this;
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
-      success(res) {
-        // tempFilePath可以作为img标签的src属性显示图片
-        const tempFilePaths = res.tempFilePaths;
-        console.log(tempFilePaths);
-        _this.setData({
-          imgUrl: tempFilePaths[0]
-        })
-      }
+  goToFile: function () {
+    wx.navigateTo({
+      url: './../file/file',
+    })
+  },
+  goToMap: function () {
+    wx.navigateTo({
+      url: './../map/map',
+    })
+  },
+  goToVideo: function () {
+    wx.navigateTo({
+      url: './../video/video',
+    })
+  },
+  goToChat: function () {
+    wx.navigateTo({
+      url: './../chat/chat',
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    console.log(app.globalData.userInfo)
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+    } else if (this.data.canIUse) {
+      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    } else {
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+        }
+      })
+    }
   },
-
+  getUserInfo: function (e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
