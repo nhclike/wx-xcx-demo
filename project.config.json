@@ -11,7 +11,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.0",
+	"libVersion": "2.9.4",
 	"appid": "wx2eb1ecbf6bbc8ea3",
 	"projectname": "wx-ms",
 	"isGameTourist": false,
@@ -32,6 +32,10 @@
 		},
 		"game": {
 			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -69,6 +73,13 @@
 					"id": -1,
 					"name": "pages/test/test",
 					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/map/map",
+					"pathName": "pages/map/map",
 					"scene": null
 				}
 			]

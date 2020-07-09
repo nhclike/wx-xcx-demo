@@ -7,10 +7,18 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view bindtap="goToChat"><button class="chat"> ♥ 聊天室 点击进入</button></view>
+  <view bindtap="goToChat"><button class="chat"> ♥ 聊天室 点击进入(webSocket)</button></view>
 </view>
+<view>
+  <button bindtap='goToSocket'>进入socket.io聊天测试页面</button>
+</view> 
  <view class="weui-cells weui-cells_after-title">
     <button bindtap='goToFile'>进入文件测试页面</button>
     <button bindtap='goToMap'>进入地图页面</button>
     <button bindtap='goToVideo'>进入视频播放页面</button>
+    <button bindtap='goToLive'>进入直播测试(live-player/live-pusher)页面</button>
+    <button bindtap='goToMsgPush'>小程序向用户推送消息</button>
+    <button bindtap='goToCanvasSign'>canvas电子白板签名</button>
+    <button bindtap='goToCanvas'>canvas涂鸦</button>
+
 </view>

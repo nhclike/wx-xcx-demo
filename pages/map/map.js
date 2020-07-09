@@ -1,4 +1,16 @@
 Page({
+  data:{
+    markers:[
+      {
+        id:"1",
+        latitude:"38.92",
+        longitude:"116.46",
+        width:"20",
+        height:"20",
+        iconPath:"/image/home.png"
+      }
+    ]
+  },
   onReady(e) {
     // 使用 wx.createMapContext 获取 map 上下文
     this.mapCtx = wx.createMapContext('myMap')
@@ -12,11 +24,17 @@ Page({
     })
   },
   moveToLocation() {
-    this.mapCtx.moveToLocation()
+    this.mapCtx.moveToLocation({
+      latitude: 23.10229,
+      longitude: 113.3345211,
+      success(res) {
+        console.log(res)
+      }
+    })
   },
   translateMarker() {
     this.mapCtx.translateMarker({
-      markerId: 0,
+      markerId: "1",
       autoRotate: true,
       duration: 1000,
       destination: {

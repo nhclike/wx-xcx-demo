@@ -1,0 +1,6 @@
+<!--pages/msgPush/msgPush.wxml-->
+<form name='pushMsgFm' report-submit="true" bindsubmit='template_Msg'>  
+    <button form-type="submit" type='primary'>发送模板消息</button>  
+    <view>最新api已经不支持模板消息了</view>
+</form>
+<button bindtap="subscribe_Msg" type='primary'>发送订阅消息</button>

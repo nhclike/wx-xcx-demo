@@ -11,7 +11,14 @@
     "pages/map/map",
     "pages/video/video",
     "pages/chat/chat",
-    "pages/file/file"
+    "pages/file/file",
+    "pages/socket/index",
+    "pages/socket/chat",
+    "pages/live/player",
+    "pages/live/pusher",
+    "pages/msgPush/msgPush",
+    "pages/canvasSign/canvasSign",
+    "pages/canvas/canvas"
   ],
   "window": {
     "backgroundTextStyle": "light",

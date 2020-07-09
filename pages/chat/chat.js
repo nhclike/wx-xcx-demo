@@ -34,7 +34,7 @@ Page({
         userInfo: app.globalData.userInfo
       })
     }
-    //调通接口
+    //调通接口，接收服务端消息处理
     websocket.connect(this.data.userInfo, function (res) {
       let data = JSON.parse(res.data);
       console.log(data)

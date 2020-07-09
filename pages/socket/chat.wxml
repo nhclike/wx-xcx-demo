@@ -1,0 +1,30 @@
+<!--pages/socket/chat.wxml-->
+<view class="page-wrap">
+    <view class="chat-container"  bindtap="outbtn">
+      <scroll-view scroll-y scroll-into-view="{{lastMessageId}}" scroll-top="9999999999">
+          <view wx:for="{{messages}}" wx:for-item="message" wx:key="id" id="{{message.id}}" class="message {{message.type}}">
+              <view wx:if="{{message.type == 'speak'}}" class="user-message {{message.isMe ? 'me' : 'other'}}">
+                  <view class="text">
+                      <view class="nickname" style="color: {{message.color}};">{{message.user}}</view>
+                      <view class="content" wx:if="{{message.content.type=='text'}}">{{message.content.msg}}</view>
+                      <image  wx:if="{{message.content.type=='image'}}" style="width: 200px; height: 200px; background-color: #eeeeee;" mode="scaleToFill" src="{{message.content.avatarUrl}}"></image>
+                  </view>
+              </view>
+              <view wx:if="{{message.type == 'system'}}" class="system-message">
+                  {{message.content}}
+              </view>
+          </view>
+      </scroll-view>
+    </view>
+    
+    <view class="message">
+      <view class="sendMessage">
+        <input type="text" value="{{inputContent}}" bindchange="changeInputContent" class="send-input" confirm-type="send" confirm-hold="true"    bindconfirm="sendMessage">
+        </input>
+        <view class="add" bindtap='increase'>+</view> 
+      </view>
+      <view class='increased {{aniStyle?"slideup":"slidedown"}}' wx:if="{{increase}}">
+        <view class="image" bindtap='chooseImage'>相册 </view>  
+      </view>
+    </view>
+</view>

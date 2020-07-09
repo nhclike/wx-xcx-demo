@@ -1,7 +1,14 @@
 <!--pages/map/map.wxml-->
 <view>
 
-  <map id="myMap" show-location class='mapContainer'/>
+  <map 
+   id="myMap" 
+   show-location
+   longitude="116.46"
+   latitude="39.92"
+   scale="3"
+   markers="{{markers}}"
+   class='mapContainer'/>
 
   <button type="primary" bindtap="getCenterLocation">获取位置</button>
   <button type="primary" bindtap="moveToLocation">移动位置</button>

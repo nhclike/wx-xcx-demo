@@ -1,0 +1,215 @@
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  background: #ebebeb;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+.chat-container {
+  flex: 1;
+  text-align: center;
+  overflow-y: auto;
+}
+.system-message {
+  font-size: 14px;
+  line-height: 14px;
+  color: #fff;
+  background: #cecece;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 8rpx 15rpx;
+  margin: 30rpx 0 10rpx;
+}
+.user-message {
+  margin: 38rpx 20rpx 0;
+  text-align: left;
+  font-size: 0;
+  display: flex;
+}
+
+.avatar {
+  width: 84rpx;
+  height: 84rpx;
+  border: #a5a5a7 1rpx solid;
+  display: inline-block;
+  vertical-align: top;
+}
+.text {
+  display: inline-block;
+  vertical-align: top;
+}
+.user-message.other .text {
+  margin-left: 19rpx;
+}
+
+.user-message.other .text view {
+  display: inline-block;
+}
+
+.text .nickname {
+  color: #737373;
+  font-size: 14px;
+  margin-bottom: 6rpx;
+}
+.text .content {
+  font-size: 30rpx;
+  line-height: 36rpx;
+  padding: 20rpx;
+  position: relative;
+}
+
+.text .nickname {
+  font-size: 36rpx;
+}
+
+.user-message.other .text .content::after,
+.user-message.other .text .content::before {
+  right: 100%;
+  border-right-style: solid;
+}
+
+.input-panel {
+  height: 100rpx;
+  padding: 13rpx 20rpx 0;
+  background: #f5f5f7;
+  border-top: #d7d7d9 1rpx solid;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.send-input {
+  flex: 1;
+  height: 72rpx;
+  background: #fff;
+  border: #ddd 1rpx solid;
+  border-radius: 3px;
+  /* margin-right: 20rpx; */
+  box-sizing: border-box;
+  /* padding: 0 10rpx; */
+}
+
+.me .nickname {
+  display: none;
+}
+
+@media (max-width: 360px) {
+  .avatar {
+    width: 100rpx;
+    height: 100rpx;
+  }
+  .text .content {
+    font-size: 36rpx;
+    line-height: 44rpx;
+    padding: 20rpx;
+    position: relative;
+  }
+  .text .nickname {
+    font-size: 42rpx;
+  }
+  .user-message.other .text .content::before {
+    top: 22rpx;
+    border-right-color: #ccc;
+  }
+  .user-message.other .text .content::after {
+    border: 14rpx solid transparent;
+    top: 23rpx;
+    border-right-color: #fff;
+  }
+
+  .input-panel {
+    height: 120rpx;
+    box-sizing: border-box;
+    padding: 13rpx 20rpx 0;
+    background: #f5f5f7;
+    border-top: #d7d7d9 1rpx solid;
+    display: flex;
+  }
+
+  .send-input {
+    flex: 1;
+    height: 92rpx;
+    background: #fff;
+    border: #ddd 1rpx solid;
+    border-radius: 3px;
+    /* margin-right: 20rpx; */
+    box-sizing: border-box;
+    /* padding: 0 10rpx; */
+  }
+}
+/* 信息输入区域 */
+.message{
+  position: relative;
+  bottom:0;
+  width: 100%;
+}
+.sendMessage{
+  display: flex;
+  height: 80rpx;
+  padding: 10rpx 10rpx; 
+  background-color: #fff; 
+  border-top: 2rpx solid #eee;
+  border-bottom: 2rpx solid #eee; 
+  z-index:3;  
+}
+.sendMessage input{
+   float:left;
+   height: 100%;
+   line-height: 80rpx;
+   border-bottom: 1rpx solid #ccc;
+   padding:0 10rpx; 
+   font-size: 35rpx;
+   color: #666;
+}
+.sendMessage .add{
+  display: inline-block; 
+  width: 70rpx;
+  height: 70rpx;
+  line-height: 60rpx; 
+  font-size: 60rpx; 
+  text-align: center;
+  color: #999;
+  border: 1rpx solid #ccc;
+  border-radius: 50%;
+  margin-left: 10rpx;
+} 
+.increased{
+  width:100%;
+  /* height: 150rpx; */
+  padding: 40rpx 30rpx;
+  background-color: #fff;
+}
+.increased .image{
+   width: 100rpx;
+   height: 100rpx;
+   border: 3rpx solid #ccc;
+   line-height: 100rpx;
+   text-align: center;
+   border-radius: 8rpx;
+   font-size:35rpx;
+}
+@keyframes slidedown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+.slidedown {
+    animation: slidedown 0.5s linear ;
+}
+.slideup {
+    animation: slideup 0.5s linear ;
+}
+@keyframes slideup {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

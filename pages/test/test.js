@@ -32,6 +32,31 @@ Page({
       url: './../chat/chat',
     })
   },
+  goToSocket:function(){
+    wx.navigateTo({
+      url: './../socket/index',
+    })
+  },
+  goToLive:function(){
+    wx.navigateTo({
+      url: './../live/pusher',
+    })
+  },
+  goToMsgPush:function(){
+    wx.navigateTo({
+      url: './../msgPush/msgPush',
+    })
+  },
+  goToCanvasSign: function () {
+    wx.navigateTo({
+      url: './../canvasSign/canvasSign',
+    })
+  },
+  goToCanvas: function () {
+    wx.navigateTo({
+      url: './../canvas/canvas',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
